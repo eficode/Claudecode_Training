@@ -14,14 +14,14 @@
                   \  \    |    /  /
                    \  ----|---  /
                     |    / \   |    how Claude perceives me
-                    |   /   \  |    Authored by Claude
+                    |   /   \  |    
                     |  /     \ |
                     | /       \|
                     |/         '
                     '
 ```
 
-# Protodrake — Claude Code Day 2 Workshop (2026 Edition)
+# Claude Code Day 2 Workshop (2026 Edition)
 
 A hands-on workshop for developers learning Claude Code's most powerful features. 11 katas total, ~3 hours if you pick 4–5 of them. Each kata has a quick **Fundamentals** section for newcomers and a meatier **Novel Layer (2026)** section that surprises even daily users.
 
@@ -35,7 +35,7 @@ Both should leave with new tricks.
 
 ## Workshop Schedule (~3 hr)
 
-Facilitators pick 4–5 katas based on audience interest. Each takes 20–35 min including a brief demo.
+Facilitators pick 3–4 katas based on audience interest. Each takes 20–35 min including a brief demo.
 
 | # | Kata | Time | Fundamentals | Novel layer (2026) |
 |---|------|------|--------------|--------------------|
@@ -88,13 +88,6 @@ Each kata has:
 - **Discussion Points** — team conversation starters
 
 ## Running the Workshop
-
-**As a facilitator:**
-- Demo each kata briefly before participants start (~3 min)
-- Skip "Fundamentals" exercises for experienced groups; do both for mixed
-- Use discussion points for group debriefs between katas
-- Pair amateur + experienced devs — they teach each other
-- Track-B for fast finishers: send them to kata 08 (Expert Topics) for self-study
 
 **Self-paced:**
 - Each kata is self-contained with its own setup/teardown
