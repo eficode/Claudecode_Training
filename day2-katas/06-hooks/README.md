@@ -337,7 +337,7 @@ Add:
 ]
 ```
 
-Have a long session, watch context fill up. When compaction triggers (auto, or via `/handoff`), check `ls /tmp/kata-06/backups/` — the full event JSON is saved.
+Have a long session, watch context fill up. When compaction triggers (auto, or via `/compact`), check `ls /tmp/kata-06/backups/` — the full event JSON is saved.
 
 #### 7. Explore the `/hooks` Viewer
 
