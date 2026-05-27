@@ -114,48 +114,4 @@ Full filesystem access, runs commands, reads `CLAUDE.md`. Be ambitious; let it e
 | **Plan first** | `"Enter plan mode. Propose an approach for adding WebSocket support for live notifications."` |
 | **Parallel work** | `"Spawn 3 subagents: one finds all auth-related files, one finds session code, one finds middleware. Synthesize."` |
 
-### Claude.ai (chat)
 
-No file access, no execution. You bring the code as pasted snippets.
-
-| Use Case | Prompt Example |
-|----------|---------------|
-| **Debug a snippet** | `"This function throws on line 12. Here's the function: [paste]. What's wrong?"` |
-| **Design / architecture** | `"I'm building a notification system. Suggest a pattern that's extensible to new channels — no code yet."` |
-| **Code review** | `"Review this diff for SQL injection and auth bypass: [paste]"` |
-| **Explain** | `"Explain what this regex does step by step: /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/"` |
-| **Compare approaches** | `"Tradeoffs between cursor-based and offset pagination for a REST API with ~1M rows?"` |
-
-### Cursor (IDE-integrated)
-
-Sees open files. Use `@` references heavily (`@file`, `@codebase`, `@docs`, `@web`).
-
-| Use Case | Prompt Example |
-|----------|---------------|
-| **Inline edit (Cmd+K)** | Select function, then: `"Convert to async/await"` |
-| **Chat with codebase** | `"@codebase How is authentication handled?"` |
-| **Composer (agent)** | `"Add a dark mode toggle. Use the existing theme context in @file:src/contexts/theme.tsx."` |
-
-### GitHub Copilot
-
-Primarily autocomplete with a chat sidebar. Lead by example — write one instance of the pattern, it replicates.
-
-| Use Case | Prompt Example |
-|----------|---------------|
-| **Comment-driven** | `// Parse CSV, skip header, return array of {name, email, role}` — let Copilot fill in |
-| **Chat** | `"Write a unit test for #file:utils.ts #selection"` |
-| **Fix** | `"/fix"` with an error selected |
-
----
-
-## Quick Comparison
-
-| Capability | Claude Code | Claude.ai | Cursor | Copilot |
-|-----------|-------------|-----------|--------|---------|
-| File system access | Full | None | Full (workspace) | Limited (open files) |
-| Command execution | Yes | No | Yes (agent mode) | No |
-| Multi-file edits | Native | Manual paste | Native | Limited |
-| Persistent config | `CLAUDE.md`, `.claude/` | Projects | `.cursorrules` | Instructions file |
-| Subagents / parallel | Native | No | Limited | No |
-| Best for | Multi-step, refactors, features | Design, review, explanation | In-IDE edits, codebase Q&A | Autocomplete, boilerplate |
-| Prompt style | Outcome-oriented, ambitious | Self-contained, context-rich | Reference-heavy (`@`), surgical | Implicit, comment-driven |
