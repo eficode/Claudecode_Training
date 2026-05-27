@@ -370,6 +370,10 @@ git init
 ```json
 {
   "name": "kata-mp",
+  "owner": {
+    "name": "",
+    "email": ""
+  },
   "version": "0.1.0",
   "plugins": [
     {
