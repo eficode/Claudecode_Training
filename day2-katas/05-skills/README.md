@@ -34,7 +34,7 @@ Use $ARGUMENTS to reference what the user passes.
 | `description` | **Trigger** for auto-invocation — write it for the model, not for humans |
 | `disable-model-invocation: true` | Only manual `/name` trigger; Claude won't auto-use |
 | `allowed-tools` | Restrict which tools the skill can use |
-| `argument-hint` | Shown in autocomplete |
+| `argument-hint` | autocomplete placeholder showing what input the user should provide |
 | `context: fork` | Run in a subagent (separate context) |
 
 ### Dynamic Content
