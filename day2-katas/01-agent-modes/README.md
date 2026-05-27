@@ -40,7 +40,7 @@ Why this matters: `max` thinking can burn tens of thousands of output tokens per
 
 ### Background Mode
 
-Append `&` to a prompt and that turn runs as a background agent — your terminal stays responsive while Claude works. Useful for long-running tasks like "run the full test suite and fix failures."
+Use '/bg' and that turn runs a task as a background agent — your terminal stays responsive while Claude works. Useful for long-running tasks like "run the full test suite and fix failures."
 
 ### Agent View — The Dashboard
 
@@ -122,7 +122,7 @@ Observe: the low-effort turn returns almost instantly with minimal "thinking." T
 
 #### 5. Dispatch a Background Agent
 
-In a Claude session, append `&` to a prompt:
+In a Claude session, use '/bg':
 
 ```
 Read every file in this project and produce a one-page summary of what it does &
