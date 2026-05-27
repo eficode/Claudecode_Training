@@ -252,22 +252,7 @@ You'll see Claude call the `deploy` tool, then a form dialog opens in your termi
 
 This pattern is the missing piece for high-stakes actions that need human confirmation **without** the tool author predicting every possible parameter combination upfront.
 
-#### 4. Add a Resource (Bonus)
-
-```javascript
-import fs from "fs";
-
-server.resource("project-info", "project://info", async (uri) => {
-  const pkg = JSON.parse(fs.readFileSync("./package.json", "utf-8"));
-  return {
-    contents: [{ uri: uri.href, mimeType: "application/json", text: JSON.stringify(pkg, null, 2) }],
-  };
-});
-```
-
-Ask Claude: `"Fetch the project://info resource and tell me what version we're on."`
-
-#### 5. (Stretch) Package as a Plugin
+#### 4. (Stretch) Package as a Plugin
 
 Building on kata 05's marketplace pattern, you can ship this MCP server through `/plugin install`:
 
