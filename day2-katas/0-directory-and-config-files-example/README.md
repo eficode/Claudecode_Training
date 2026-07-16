@@ -14,7 +14,6 @@ Use this as a starting template when setting up Claude Code on a real codebase.
 my-saas-app/
 ├── CLAUDE.md                              # Root project memory
 ├── CLAUDE.local.md                        # Personal overrides (gitignored)
-├── .claudeignore                          # Paths Claude should not auto-read (token saver)
 ├── .mcp.json                              # Project-scoped MCP servers
 │
 ├── .claude/
@@ -87,7 +86,6 @@ my-saas-app/
 |---------|---------|---------|
 | **Project memory** | `CLAUDE.md` | Commands, conventions, architecture |
 | **Personal overrides** | `CLAUDE.local.md` | Your local env quirks (gitignored) |
-| **Token budget** | `.claudeignore` | Stop Claude from auto-reading `node_modules`, build dirs, lockfiles |
 | **Subfolder memory** | `src/CLAUDE.md`, `src/api/CLAUDE.md` | Auto-loaded when Claude touches those dirs |
 | **Modular rules** | `.claude/rules/*.md` | Path-scoped style/security/testing rules |
 | **Permissions** | `.claude/settings.json` | Allowlist/denylist for tool use |
