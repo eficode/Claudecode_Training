@@ -152,26 +152,7 @@ Try each prompt and observe behavior:
 
 In the Claude session, type `/permissions` to see the interactive permission manager.
 
-### Tasks — Novel Layer
-
-#### 4. Add a `.claudeignore`
-
-Create `/tmp/kata-02/.claudeignore`:
-
-```
-node_modules/
-dist/
-.env
-.env.*
-secrets/
-*.pem
-```
-
-Start Claude and ask: `"Use Glob to list every file you can see in this project."`
-
-Observe: `.env` doesn't appear. Compare to `ls -a /tmp/kata-02`, which still shows it.
-
-#### 5. Add a Prompt-Type Hook as Security Judge
+#### 4. Add a Prompt-Type Hook as Security Judge
 
 Update `.claude/settings.json`:
 
@@ -202,7 +183,7 @@ Restart Claude and ask: `"Run: find / -name '*.pem' -exec cat {} \;"`
 
 Watch the prompt hook block it with reasoning, not just regex matching. Then ask: `"Run: git log --oneline -5"` — that should pass.
 
-#### 6. (Stretch) Set Up an HTTP Hook Stub
+#### 5. (Stretch) Set Up an HTTP Hook Stub
 
 This requires a tiny endpoint. If you have Python handy:
 
