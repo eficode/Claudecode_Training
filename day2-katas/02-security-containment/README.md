@@ -43,33 +43,6 @@ Enable with the `/sandbox` slash command. Restricts filesystem access and networ
 
 ---
 
-## Theory — Novel Layer (2026)
-
-### `.claudeignore` — The Token Saver That Doubles As Security
-
-A `.claudeignore` at the project root tells Claude to skip files when auto-reading or globbing. Two wins:
-
-1. **Token savings**: Claude stops slurping `node_modules`, `dist`, lockfiles, build artifacts
-2. **Security**: Effective scope reduction — even read-allowed Claude won't see `.env*`, `secrets/`, `*.pem`
-
-Format mirrors `.gitignore`:
-
-```
-node_modules/
-dist/
-.next/
-*.log
-
-# secrets
-.env
-.env.*
-secrets/
-*.pem
-*.key
-```
-
-Note: this is *advisory* — a determined operator can still `Read` specific files. Combine with deny rules for real enforcement.
-
 ### Prompt-Type Hooks — AI as a Security Judge
 
 The 2026 hook system supports four handler types: `command`, `http`, `prompt`, `agent`. The `prompt` type sends event context to a small, fast model (Haiku) that returns a decision. You get AI-quality judgment as a security gate.
